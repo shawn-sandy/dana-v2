@@ -12,13 +12,17 @@ const pageTitle = "Home page";
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fpkit/react@0.3.33/libs/index.css"
     />
+    <meta name="description" content="A brief description of the page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
   <body>
     <Navigation />
-    <slot />
+    <main>
+      <section><slot /></section>
+    </main>
     <Footer />
   </body>
 </html>

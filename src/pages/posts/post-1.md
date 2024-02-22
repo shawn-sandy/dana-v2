@@ -25,4 +25,17 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 ## What's next
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+I plan to keep learning Astro and share what I build here. There is more to come
+soon. I will finish the Astro tutorial, and then keep adding more posts. Watch
+this space for more to come.
+
+Astro is an exciting new web framework that makes building websites fast, fun
+and approachable. It lets you write your site in components using familiar web
+languages like HTML, CSS and JavaScript. Astro removes much of the complexity of
+traditional web development by handling things like server-side rendering,
+bundling and optimizations for you. This allows you to focus on creating amazing
+user experiences instead of configuring build tools. With Astro's excellent
+documentation and active community, it's easy to get started building your next
+project. Give Astro a try if you want a simpler way to craft beautiful,
+lightning-fast websites!
+Unfortunately, there is no content provided between the
