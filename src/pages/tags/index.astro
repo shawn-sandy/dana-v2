@@ -6,17 +6,13 @@ const pageTitle = "Tag Index";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <main>
-    <section>
-      <ul data-list="unstyled">
-        {
-          tags.map((tag) => (
-            <li class="tag">
-              <a href={`/tags/${tag}`}>{tag}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-  </main>
+  <ul data-list="unstyled">
+    {
+      tags.map((tag) => (
+        <li class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </li>
+      ))
+    }
+  </ul>
 </BaseLayout>

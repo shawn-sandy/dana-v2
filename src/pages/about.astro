@@ -17,51 +17,54 @@ const goal = 3;
 ---
 
 <BaseLayout>
-  <main>
-    <section>
-      <h1>About Me</h1>
-      <h1>{pageTitle}</h1>
-      <h2>... and my new Astro site!</h2>
+  <h2>{pageTitle}</h2>
+  <h3>... and my new Astro site!</h3>
 
-      <p>
-        I am working through Astro's introductory tutorial. This is the second
-        page on my website, and it's the first one I built myself!
-      </p>
+  <p>
+    I am working through Astro's introductory tutorial. This is the second page
+    on my website, and it's the first one I built myself!
+  </p>
 
-      <p>
-        This site will update as I complete more of the tutorial, so keep
-        checking back and see how my journey is going!
-      </p>
-      <p>Here are a few facts about me:</p>
-      <ul>
-        <li>My name is {identity.firstName}.</li>
+  <p>
+    This site will update as I complete more of the tutorial, so keep checking
+    back and see how my journey is going!
+  </p>
+  <p>Here are a few facts about me:</p>
+  <ul>
+    <li>My name is {identity.firstName}.</li>
+    <li>
+      I live in {identity.country} and I work as a {identity.occupation}.
+    </li>
+    {
+      identity.hobbies.length >= 2 && (
         <li>
-          I live in {identity.country} and I work as a {identity.occupation}.
+          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
         </li>
-        {
-          identity.hobbies.length >= 2 && (
-            <li>
-              Two of my hobbies are: {identity.hobbies[0]} and{" "}
-              {identity.hobbies[1]}
-            </li>
-          )
-        }
-      </ul>
-      <p>My skills are:</p>
-      <ul>
-        {skills.map((skill) => <li>{skill}</li>)}
-      </ul>
-      {happy && <p>I am happy to be learning Astro!</p>}
+      )
+    }
+  </ul>
 
-      {finished && <p>I finished this tutorial!</p>}
+  <p>
+    I have experience with a wide range of technical skills that are useful for
+    web development and writing documentation. Some of my strongest abilities
+    are with HTML, CSS, JavaScript, React, and Astro. I also have skills in
+    writing documentation, which helps me create tutorials and API references.
+    My goal is to continue improving my development and writing skills over
+    time.
+  </p>
+  <p>My skills are:</p>
+  <ul>
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+  {happy && <p>I am happy to be learning Astro!</p>}
 
-      {
-        goal === 3 ? (
-          <p>My goal is to finish in 3 days.</p>
-        ) : (
-          <p>My goal is not 3 days.</p>
-        )
-      }
-    </section>
-  </main>
+  {finished && <p>I finished this tutorial!</p>}
+
+  {
+    goal === 3 ? (
+      <p>My goal is to finish in 3 days.</p>
+    ) : (
+      <p>My goal is not 3 days.</p>
+    )
+  }
 </BaseLayout>
