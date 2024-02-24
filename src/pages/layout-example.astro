@@ -1,0 +1,87 @@
+---
+
+---
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background-color: #f0f0f0;
+    min-height: 40vh; /* Maximum height for the header */
+    overflow: auto;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  main {
+    flex: 1; /* Allows the main content to fill the available space */
+    overflow: auto;
+    padding: 20px;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    min-height: 4rem; /* Minimum height for the footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Page Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <!-- Navigation Links -->
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <header>
+      <!-- Header Content -->
+      <section>
+        <h1>Welcome to Our Website</h1>
+      </section>
+    </header>
+    <main>
+      <!-- Main Content -->
+      <section id="home">
+        <h2>Home Section</h2>
+        <p>Welcome to our homepage.</p>
+      </section>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our company.</p>
+      </section>
+      <!-- More sections -->
+    </main>
+    <footer>
+      <!-- Footer Content -->
+      <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

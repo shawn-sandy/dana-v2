@@ -1,6 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
 const pageTitle = "Home page";
 ---
 
@@ -10,7 +12,11 @@ const pageTitle = "Home page";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fpkit/react@0.3.33/libs/index.css"
+      href="https://cdn.jsdelivr.net/npm/@fpkit/react/libs/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fpkit/react@0.3.39/libs/index.css"
     />
     <meta name="description" content="A brief description of the page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,8 +26,10 @@ const pageTitle = "Home page";
   </head>
   <body>
     <Navigation />
+    <Header />
     <main>
-      <section><slot /></section>
+      <section arai-label="main-content"><slot /></section>
+      <Sidebar />
     </main>
     <Footer />
   </body>
