@@ -27,7 +27,7 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle={`Tag: ${tag.toUpperCase()}`}>
   <ul data-list="unstyled">
     {
-      posts.map((post) => (
+      posts?.map((post) => (
         <BlogPost
           url={post.url}
           title={post.frontmatter.title}
