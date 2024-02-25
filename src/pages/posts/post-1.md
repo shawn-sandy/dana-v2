@@ -23,7 +23,7 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
 
-### What's next
+## What's next
 
 I plan to keep learning Astro and share what I build here. There is more to come
 soon. I will finish the Astro tutorial, and then keep adding more posts. Watch
