@@ -3,7 +3,7 @@ const { title, url, description } = Astro.props;
 ---
 
 <li>
-  <h1 data-ui="display">{title}</h1>
+  <h2 data-ui="display">{title}</h2>
   {description && <p>{description}</p>}
   <p>
     <a href={url} aria-label={`Continue reading ${title}`}>Continue</a>
