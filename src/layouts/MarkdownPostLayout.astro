@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
+  <h2>{frontmatter.title}</h2>
   <p>{frontmatter.pubDate.slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
@@ -16,15 +16,17 @@ const { frontmatter } = Astro.props;
     />
   </p>
   <slot />
-  <ul class="tags" data-list="unstyled inline">
-    {
-      frontmatter.tags.map((tag) => (
-        <li class="tag">
-          <a href={`/tags/${tag}`}>
-            <span data-tag>{tag}</span>
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <div>
+    <ul class="tags" data-list="unstyled inline">
+      {
+        frontmatter.tags.map((tag) => (
+          <li class="tag">
+            <a href={`/tags/${tag}`}>
+              <span data-tag>{tag}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
