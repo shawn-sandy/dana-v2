@@ -398,10 +398,10 @@
   resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.19.8.tgz"
   integrity sha512-RQw9DemMbIq35Bprbboyf8SmOr4UXsRVxJ97LgB55VKKeJOOdvsIPy0nFyF2l8U+h4PtBx/1kRf0BelOYCiQcw==
 
-"@fpkit/react@^0.3.40":
-  version "0.3.40"
-  resolved "https://registry.npmjs.org/@fpkit/react/-/react-0.3.40.tgz"
-  integrity sha512-5TUZ/5HPgFBjdJzI6FTBMM4Nk2ahRbt8FDVjrD43x170U0MbdjKXYCNCr5+GUpWFJbo43jCrn6tFKHjXa3VqLQ==
+"@fpkit/react@^0.3.43":
+  version "0.3.43"
+  resolved "https://registry.npmjs.org/@fpkit/react/-/react-0.3.43.tgz"
+  integrity sha512-CIRfQSzI503KFyJbKAbHBicSiWNxSKYUACHQgf60lAbS6tqLQMNVYrRPFjKdVg0ju8w2L/hPnQYmChM38zgwJQ==
   dependencies:
     focus-trap "^7.5.2"
     react "^18.0.0"
