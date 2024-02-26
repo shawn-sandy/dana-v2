@@ -2,6 +2,10 @@ body {
     min-width: 20.3125rem;
 }
 
+main {
+    padding-block: 2rem;
+}
+
 main > section {
     padding-inline: 2rem;
 }
