@@ -1,16 +1,17 @@
 ---
+import { getCollection } from "astro:content";
 const postListTitle = Astro.props.postListTitle || "Latest Posts";
-const allPosts = await Astro.glob("../pages/posts/*.md");
+const allPosts = await getCollection("posts");
 ---
 
-<h3 data-ui="display">
+<h4 data-ui="display">
   {postListTitle}
-</h3>
+</h4>
 <ul data-list="unstyled">
   {
     allPosts?.map((post) => (
       <li>
-        <a href={post.url}>{post.frontmatter.title} </a>
+        <a href={`posts/${post.slug}`}>{post.data.title} </a>
       </li>
     ))
   }

@@ -29,6 +29,10 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## Deploying to the Web
+
+- [Click here to deploy FP-Pages to Netlify.](https://app.netlify.com/start/deploy?repository=https://github.com/shawn-sandy/astro-basics) - you can read more about Netlify here [Netlify](https://www.netlify.com/) and make sure and check out the [Netlify docs](https://docs.netlify.com/)
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

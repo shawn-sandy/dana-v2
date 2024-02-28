@@ -1,7 +1,11 @@
 ---
 const headerTitle = Astro.props.headerTitle || "Header Title";
+const headerDescription = Astro.props.headerDescription || "Description text";
 ---
 
 <header>
-  <h1 data-ui="display">{headerTitle}</h1>
+  <section>
+    <h1 data-ui="display">{headerTitle}</h1>
+    <p>{headerDescription}</p>
+  </section>
 </header>
