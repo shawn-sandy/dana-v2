@@ -9,4 +9,5 @@ export default defineConfig({
   site: "https://example.com",
   integrations: [react(), mdx()],
   adapter: netlify(),
+  output: "hybrid",
 });
