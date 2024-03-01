@@ -32,11 +32,15 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 ## Deploying to the Web
 
+ Deploying an Astro project is easy with services like Vercel and Netlify. Both are integrated with GitHub for continuous deployment
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/shawn-sandy/astro-basics)
+
+For more info  on Vercel services visit [Vercel](https://vercel.com/) and make sure and check out the [Vercel docs](https://vercel.com/docs)
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](<https://app.netlify.com/start/deploy?repository=https://github.com/shawn-sandy/astro-basics>)
 
-- [Click here to deploy FP-Pages to Netlify.](https://app.netlify.com/start/deploy?repository=https://github.com/shawn-sandy/astro-basics) - you can read more about Netlify here [Netlify](https://www.netlify.com/) and make sure and check out the [Netlify docs](https://docs.netlify.com/)
+ You can read more about Netlify here [Netlify](https://www.netlify.com/) and make sure and check out the [Netlify docs](https://docs.netlify.com/)
 
 ## 🧞 Commands
 
