@@ -5,5 +5,10 @@
     "jsxImportSource": "react",
     "strictNullChecks": true,
     "allowJs": true
+  },
+  "paths": {
+    "#*": [
+      "./src/*"
+    ],
   }
 }

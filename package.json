@@ -10,6 +10,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "imports": {
+    "#*": "./src/*"
+  },
   "dependencies": {
     "@astrojs/mdx": "^2.1.1",
     "@astrojs/netlify": "^5.1.2",
