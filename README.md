@@ -28,8 +28,13 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
 Any static assets, like images, can be placed in the `public/` directory.
+<https://github.com/shawn-sandy/astro-basics>
 
 ## Deploying to the Web
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/shawn-sandy/astro-basics)
+
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](<https://app.netlify.com/start/deploy?repository=https://github.com/shawn-sandy/astro-basics>)
 
 - [Click here to deploy FP-Pages to Netlify.](https://app.netlify.com/start/deploy?repository=https://github.com/shawn-sandy/astro-basics) - you can read more about Netlify here [Netlify](https://www.netlify.com/) and make sure and check out the [Netlify docs](https://docs.netlify.com/)
 
