@@ -412,10 +412,10 @@
   resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.19.8.tgz"
   integrity sha512-RQw9DemMbIq35Bprbboyf8SmOr4UXsRVxJ97LgB55VKKeJOOdvsIPy0nFyF2l8U+h4PtBx/1kRf0BelOYCiQcw==
 
-"@fpkit/react@^0.3.51":
-  version "0.3.51"
-  resolved "https://registry.npmjs.org/@fpkit/react/-/react-0.3.51.tgz"
-  integrity sha512-IleZ3O2HssEf9t9Gf0zdV2VeHs+1H9+SGn9yDkzy8Q0DjrSjBtGxzRjkSmF9cNHQ7sGC/uOl+d8zWpkZm3ezIw==
+"@fpkit/react@^0.3.52":
+  version "0.3.52"
+  resolved "https://registry.npmjs.org/@fpkit/react/-/react-0.3.52.tgz"
+  integrity sha512-Wc4GGqLoSUqX0tR9f3V05VkRzIRqMy5ZvlbevvCA6aXnYRWMKfLHkoVmTnAXtehgZkvruUhcQy+MMwGeKt8jow==
   dependencies:
     focus-trap "^7.5.2"
     react "^18.0.0"
@@ -665,6 +665,11 @@
   version "0.16.8"
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.8.tgz"
   integrity sha512-WZLiwShhwLRmeV6zH+GkbOFT6Z6VklCItrDioxUnv+u4Ll+8vKeFySoFyK/0ctcRpOmwAicELfmys1sDc/Rw+A==
+
+"@types/ungap__structured-clone@^0.3.0":
+  version "0.3.3"
+  resolved "https://registry.npmjs.org/@types/ungap__structured-clone/-/ungap__structured-clone-0.3.3.tgz"
+  integrity sha512-RNmhIPwoip6K/zZOv3ypksTAqaqLEXvlNSXKyrC93xMSOAHZCR7PifW6xKZCwkbbnbM9dwB9X56PPoNTlNwEqw==
 
 "@types/unist@*":
   version "2.0.6"
@@ -1497,6 +1502,11 @@ function-bind@^1.1.1:
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+gemoji@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npmjs.org/gemoji/-/gemoji-4.2.1.tgz"
+  integrity sha512-V9lUpRSn+KQGavZx8Pk+6mxG3kaz21ae2kTCXuT36KaRPNgYU8eHtj/RcUCNFVvmwppsYYz3nnNS9lmcP5kTsg==
+
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
   resolved "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz"
@@ -1586,6 +1596,11 @@ hast-util-from-parse5@^8.0.0:
     vfile "^6.0.0"
     vfile-location "^5.0.0"
     web-namespaces "^2.0.0"
+
+hast-util-is-element@^1.0.3:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-1.1.0.tgz"
+  integrity sha512-oUmNua0bFbdrD/ELDSSEadRVtWZOf3iF6Lbv81naqsIV99RnSCieTbWuWCY8BAeEfKJTKl0gRdokv+dELutHGQ==
 
 hast-util-parse-selector@^4.0.0:
   version "4.0.0"
@@ -2203,6 +2218,19 @@ mdast-util-to-string@^4.0.0:
   integrity sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==
   dependencies:
     "@types/mdast" "^4.0.0"
+
+mdast-util-toc@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/mdast-util-toc/-/mdast-util-toc-7.0.0.tgz"
+  integrity sha512-C28UcSqjmnWuvgT8d97qpaItHKvySqVPAECUzqQ51xuMyNFFJwcFoKW77KoMjtXrclTidLQFDzLUmTmrshRweA==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    "@types/ungap__structured-clone" "^0.3.0"
+    "@ungap/structured-clone" "^1.0.0"
+    github-slugger "^2.0.0"
+    mdast-util-to-string "^4.0.0"
+    unist-util-is "^6.0.0"
+    unist-util-visit "^5.0.0"
 
 merge-stream@^2.0.0:
   version "2.0.0"
@@ -3001,6 +3029,16 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
+rehype-accessible-emojis@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/rehype-accessible-emojis/-/rehype-accessible-emojis-0.3.2.tgz"
+  integrity sha512-kChZo+EZsuFQYHUPu6kOZFjDrG7UtQdGxkrCvHBVo9ariKPL6S68QdPVxLxwcAtZSRZIXZhDuTJHgIM8KW24Qw==
+  dependencies:
+    emoji-regex "^8.0.0"
+    gemoji "^4.2.1"
+    hast-util-is-element "^1.0.3"
+    unist-util-flatmap "^1.0.0"
+
 rehype-parse@^9.0.0:
   version "9.0.0"
   resolved "https://registry.npmjs.org/rehype-parse/-/rehype-parse-9.0.0.tgz"
@@ -3096,6 +3134,14 @@ remark-stringify@^11.0.0:
     "@types/mdast" "^4.0.0"
     mdast-util-to-markdown "^2.0.0"
     unified "^11.0.0"
+
+remark-toc@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.npmjs.org/remark-toc/-/remark-toc-9.0.0.tgz"
+  integrity sha512-KJ9txbo33GjDAV1baHFze7ij4G8c7SGYoY8Kzsm2gzFpbhL/bSoVpMMzGa3vrNDSWASNd/3ppAqL7cP2zD6JIA==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    mdast-util-toc "^7.0.0"
 
 resolve@^1.22.4:
   version "1.22.4"
@@ -3588,6 +3634,11 @@ unified@^11.0.0, unified@^11.0.4:
     is-plain-obj "^4.0.0"
     trough "^2.0.0"
     vfile "^6.0.0"
+
+unist-util-flatmap@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/unist-util-flatmap/-/unist-util-flatmap-1.0.0.tgz"
+  integrity sha512-IG32jcKJlhARCYT2LsYPJWdoXYkzz3ESAdl1aa2hn9Auh+cgUmU6wgkII4yCc/1GgeWibRdELdCZh/p3QKQ1dQ==
 
 unist-util-is@^5.0.0:
   version "5.2.0"
