@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "#layouts/BaseLayout.astro";
+import Layout from "../layouts/Layout.astro";
 const pageTitle = "About Me";
 
 const identity = {
@@ -16,7 +16,7 @@ const finished = false;
 const goal = 3;
 ---
 
-<BaseLayout>
+<Layout>
   <h2>{pageTitle}</h2>
   <h3>... and my new Astro site!</h3>
 
@@ -67,4 +67,4 @@ const goal = 3;
       <p>My goal is not 3 days.</p>
     )
   }
-</BaseLayout>
+</Layout>
