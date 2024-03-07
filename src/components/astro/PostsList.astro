@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 const postListTitle = Astro.props.postListTitle || "Latest Posts";
+const postLength = Astro.props.postLength || 10;
 const allPosts = await getCollection("posts");
+const paginatedPosts = allPosts.slice(0, postLength);
 ---
 
 <h4 data-ui="display">
@@ -9,7 +11,7 @@ const allPosts = await getCollection("posts");
 </h4>
 <ul data-list="unstyled">
   {
-    allPosts?.map((post) => (
+    paginatedPosts?.map((post) => (
       <li>
         <a href={`/posts/${post.slug}`}>{post.data.title} </a>
       </li>
