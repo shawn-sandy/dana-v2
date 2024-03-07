@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import BlogPosts from "./BlogPosts.astro";
+import Blog from "../../pages/blog.astro";
+const contentTitle = Astro.props.contentTitle;
+
+const postLength = Astro.props.postLength || 10;
+const allPosts = await getCollection("posts");
+const paginatedPosts = allPosts.slice(0, postLength);
+---
+
+{contentTitle && <h3 data-ui="display">{contentTitle}</h3>}
+<ul data-list="unstyled">
+  {
+    paginatedPosts?.map((post) => (
+      <>
+        <BlogPosts
+          title={post.data.title}
+          description={post.data.description}
+          url={`/posts/${post.slug}`}
+        />
+      </>
+    ))
+  }
+</ul>
+<style>
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+</style>

@@ -1,9 +1,9 @@
 ---
-import type { GetStaticPaths } from "astro";
+// import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 
 import Layout from "#layouts/Layout.astro";
-import BlogPosts from "#components/BlogPosts.astro";
+import BlogPosts from "#components/astro/BlogPosts.astro";
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection("posts");
