@@ -1,15 +1,17 @@
 ---
 // import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
-
 import Layout from "#layouts/Layout.astro";
 import BlogPosts from "#components/astro/BlogPosts.astro";
+import Pagination from "#components/astro/Pagination.astro";
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection("posts");
   return paginate(allPosts, { pageSize: 2 });
 }
 
+const all = await getCollection("posts");
+const pageSize = 2;
 const { page } = Astro.props as any;
 ---
 
@@ -27,10 +29,11 @@ const { page } = Astro.props as any;
   </ul>
   <nav>
     <div>
-      {page?.url?.prev && <a href={page?.url?.prev}>Previous</a>}
+      {page?.url?.prev ? <a href={page?.url?.prev}>Previous</a> : "Previous"}
     </div>
+    <Pagination items={all} itemsPerPage={pageSize} />
     <div>
-      {page?.url?.next && <a href={page?.url?.next}>Next</a>}
+      {page?.url?.next ? <a href={page?.url?.next}>Next</a> : "Next"}
     </div>
   </nav>
 </Layout>
