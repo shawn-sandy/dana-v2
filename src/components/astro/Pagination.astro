@@ -1,0 +1,21 @@
+---
+const itemsArray: [] = Astro.props.items;
+const itemsPerPage: number = Astro.props.itemsPerPage || 5;
+const currentPage: number = Astro.props.currentPage || 1;
+const to: string = Astro.props.to || "posts";
+
+const totalPages = Math.ceil(itemsArray.length / itemsPerPage);
+const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+---
+
+<ul data-list="unstyled inline">
+  {
+    pageNumbers.map((number) => {
+      return (
+        <li>
+          <a href={`/${to}/${number}`}>{number}</a>
+        </li>
+      );
+    })
+  }
+</ul>
