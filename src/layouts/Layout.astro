@@ -6,7 +6,24 @@ import Header from "../components/astro/Header.astro";
 import Sidebar from "../components/astro/Sidebar.astro";
 import AstroBreadcrumb from "#components/react/astro-breadcrumb.tsx";
 import "@fpkit/react/styles";
-const { pageTitle, pageDescription } = Astro.props;
+
+// types
+type routeItem = {
+  name: string;
+  url: string;
+  path?: string;
+};
+type Props = {
+  pageTitle?: string;
+  pageDescription?: string;
+  showBreadcrumb?: boolean;
+  breadcrumbRoutes?: routeItem[];
+};
+
+const showBreadcrumb =
+  Astro.props.showBreadcrumb === undefined ? true : Astro.props.showBreadcrumb;
+
+const { pageTitle, pageDescription, breadcrumbRoutes } = Astro.props;
 import "../styles/index.css";
 ---
 
@@ -28,8 +45,19 @@ import "../styles/index.css";
     <main>
       <section arai-label="main-content">
         <article>
-          <div><AstroBreadcrumb client:load /></div>
-          <hr />
+          {
+            showBreadcrumb && (
+              <>
+                <div>
+                  <AstroBreadcrumb
+                    routes={breadcrumbRoutes || undefined}
+                    client:load
+                  />
+                </div>
+                <hr />
+              </>
+            )
+          }
           <slot />
         </article>
         <Sidebar />
