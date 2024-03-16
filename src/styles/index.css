@@ -38,3 +38,7 @@ footer > div {
   margin-inline-start: 0;
   background-color: red;
 }
+
+p {
+  line-height: 1.7;
+}
