@@ -43,6 +43,8 @@ footer > div {
   background-color: red;
 }
 
-p {
-  line-height: 1.7;
+section:has(> nav) {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
 }
