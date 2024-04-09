@@ -1,25 +1,18 @@
 import { Breadcrumb } from "@fpkit/react";
 import type React from "react";
+import { BREADCRUMB_ROUTE } from "#utils/site-config";
 
-const astroRoutes = [
-  {
-    name: "Blog",
-    url: "/posts/1",
-    path: "posts",
-  },
-  {
-    name: "About us",
-    url: "about",
-    path: "about",
-  },
-];
+const astroRoutes = BREADCRUMB_ROUTE;
 
 type AstroRoutes = Pick<React.ComponentProps<typeof Breadcrumb>, "routes">;
 
 export const AstroBreadcrumb = ({ routes }: AstroRoutes) => {
-  const breadcrumbRoute = routes ? [...routes, ...astroRoutes] : astroRoutes;
+  const spacer = <>&raquo;</>;
+  const breadcrumbRoute = routes?.length
+    ? [...astroRoutes, ...routes]
+    : astroRoutes;
 
-  return <Breadcrumb routes={breadcrumbRoute} />;
+  return <Breadcrumb routes={breadcrumbRoute} spacer={spacer} />;
 };
 
 export default AstroBreadcrumb;

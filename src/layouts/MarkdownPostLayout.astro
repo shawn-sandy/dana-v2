@@ -1,6 +1,8 @@
 ---
 import Layout from "./Layout.astro";
 import Youtube from "#components/astro/Youtube.astro";
+import Img from "#components/astro/Img.astro";
+import { fade } from "astro:transitions";
 
 const { frontmatter } = Astro.props;
 const { slug } = Astro.params;
@@ -19,18 +21,15 @@ const contentRoute = [
   pageDescription={frontmatter.description}
   breadcrumbRoutes={contentRoute}
 >
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-
-  <p>Written by: {frontmatter.author}</p>
   {
     frontmatter.image && (
-      <p>
-        <img
-          src={frontmatter.image.url}
-          width="800"
-          alt={frontmatter.image?.alt || ""}
+      <>
+        <Img
+          imgSrc={frontmatter.image.url}
+          imgAlt={frontmatter.image?.alt}
+          imgCaption={frontmatter.image?.caption}
         />
-      </p>
+      </>
     )
   }
   {
@@ -42,18 +41,19 @@ const contentRoute = [
   }
 
   <slot />
-
-  <div>
-    <ul class="tags" data-list="unstyled inline">
-      {
-        frontmatter.tags.map((tag) => (
-          <li class="tag">
-            <a href={`/tags/${tag}`}>
-              <span data-tag>{tag}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  {
+    frontmatter.tags && frontmatter.tags.length > 0 && (
+      <div>
+        <ul class="tags" data-list="unstyled inline">
+          {frontmatter.tags.map((tag) => (
+            <li class="tag">
+              <a href={`/tags/${tag}`}>
+                <span data-tag>{tag}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
 </Layout>

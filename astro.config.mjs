@@ -5,14 +5,24 @@ import remarkToc from "remark-toc";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
-
-import sentry from "@sentry/astro";
+import embeds from "astro-embed/integration";
 import spotlightjs from "@spotlightjs/astro";
+import { astroImageTools } from "astro-imagetools";
+
+import lighthouse from "astro-lighthouse";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [react(), mdx(), sitemap(), spotlightjs()],
+  integrations: [
+    react(),
+    sitemap(),
+    spotlightjs(),
+    lighthouse(),
+    embeds(),
+    mdx(),
+    astroImageTools,
+  ],
   adapter: netlify(),
   output: "hybrid",
   // Enable Custom Markdown options, plugins, etc.
