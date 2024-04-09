@@ -11,10 +11,12 @@ const postsCollection = defineCollection({
       .object({
         url: z.string(),
         alt: z.string(),
+        caption: z.string().optional(),
       })
       .optional(),
     tags: z.array(z.string()).optional(),
     draft: z.boolean().default(false),
+    featured: z.boolean().default(false),
     youtube: z
       .object({
         id: z.string(),
