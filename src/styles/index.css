@@ -1,3 +1,4 @@
+@import url("./ds.css");
 body {
   min-width: 20.3125rem;
 }
@@ -92,4 +93,19 @@ article > figure:has(img[alt]) {
 article > figure > img[alt] {
   min-width: 100%;
   border-radius: 0;
+}
+
+a[href],
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ds-primary-800);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  color: var(--ds-primary-700);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }

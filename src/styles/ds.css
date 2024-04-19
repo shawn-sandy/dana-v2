@@ -1,0 +1,53 @@
+:root {
+/* ds-primary CSS Vars */
+--ds-primary-100: hsl(248, 100%, 97%);
+--ds-primary-200: hsl(247, 95%, 93%);
+--ds-primary-300: hsl(248, 95%, 85%);
+--ds-primary-400: hsl(248, 95%, 78%);
+--ds-primary-500: hsl(248, 95%, 71%);
+--ds-primary-600: hsl(248, 68%, 59%);
+--ds-primary-700: hsl(248, 46%, 45%);
+--ds-primary-800: hsl(248, 47%, 30%);
+--ds-primary-900: hsl(248, 47%, 15%);
+/* Nero CSS Vars */
+--nero-100: hsl(0, 0%, 90%);
+--nero-200: hsl(0, 0%, 80%);
+--nero-300: hsl(0, 0%, 62%);
+--nero-400: hsl(0, 0%, 47%);
+--nero-500: hsl(0, 0%, 35%);
+--nero-600: hsl(0, 0%, 25%);
+--nero-700: hsl(0, 0%, 17%);
+--nero-800: hsl(0, 0%, 11%);
+--nero-900: hsl(0, 0%, 5%);
+/* Errors CSS Vars */
+--errors-100: hsl(357, 59%, 93%);
+--errors-200: hsl(356, 63%, 86%);
+--errors-300: hsl(354, 66%, 78%);
+--errors-400: hsl(353, 69%, 67%);
+--errors-500: hsl(347, 82%, 48%);
+--errors-600: hsl(347, 83%, 43%);
+--errors-700: hsl(347, 82%, 37%);
+--errors-800: hsl(347, 83%, 30%);
+--errors-900: hsl(347, 83%, 21%);
+/* Warning CSS Vars */
+--warning-100: hsl(30, 100%, 95%);
+--warning-200: hsl(33, 100%, 89%);
+--warning-300: hsl(33, 100%, 83%);
+--warning-400: hsl(36, 100%, 74%);
+--warning-500: hsl(39, 100%, 61%);
+--warning-600: hsl(39, 77%, 55%);
+--warning-700: hsl(39, 64%, 47%);
+--warning-800: hsl(40, 64%, 38%);
+--warning-900: hsl(39, 64%, 27%);
+/* Success CSS Vars */
+--success-100: hsl(135, 29%, 92%);
+--success-200: hsl(136, 30%, 83%);
+--success-300: hsl(136, 32%, 72%);
+--success-400: hsl(138, 36%, 60%);
+--success-500: hsl(146, 75%, 38%);
+--success-600: hsl(146, 76%, 34%);
+--success-700: hsl(146, 76%, 29%);
+--success-800: hsl(146, 75%, 24%);
+--success-900: hsl(146, 76%, 17%);
+
+}
