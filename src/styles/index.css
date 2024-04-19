@@ -1,4 +1,9 @@
 @import url("./ds.css");
+
+:root {
+  --overlay-bg: transparent;
+  --brand-font: font-family: "Play", sans-serif;
+}
 body {
   min-width: 20.3125rem;
 }
@@ -102,10 +107,28 @@ h3,
 h4 {
   color: var(--ds-primary-800);
   text-decoration: none;
+  font-family: var(--brand-font);
+  font-family: "Play", sans-serif;
 }
 
 a[href]:hover {
   color: var(--ds-primary-700);
   text-decoration: underline;
   text-decoration-thickness: 2px;
+}
+
+body > nav {
+  height: fit-content;
+}
+
+hr {
+  --hr-color: var(--ds-primary-200);
+}
+
+header {
+  --overlay-bg: transparent;
+}
+
+body > nav ul > li:hover {
+  background-color: transparent;
 }
