@@ -19,8 +19,8 @@
 		"prefix": "blogpost",
 		"body": [
 			"---",
-			"title: '${1:Blog Post Titled Here}'",
-			"pubDate: ${2:2022-07-01}",
+			"title: '${1:Blog Post Title Here}'",
+			"pubDate: ${2:${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
 			"description: '${3:This is the first post of my new Astro blog.}'",
 			"author: '${4:Astro Basics}'",
 			"image:",
