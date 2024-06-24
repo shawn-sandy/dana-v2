@@ -1,0 +1,28 @@
+---
+export type Props = {
+  link?: string;
+  showButton?: boolean;
+  className?: string;
+  buttonAriaLabel?: string;
+  style?: {};
+};
+
+const { link, showButton, className, buttonAriaLabel, style } = Astro.props;
+---
+
+<div class={`features`} style={style} data-grid>
+  <slot />
+  {
+    showButton && (
+      <div class="align-right">
+        <a
+          href={link || "#"}
+          class="button-continue"
+          aria-label={buttonAriaLabel || "Continue reading"}
+        >
+          <b aria-hidden="true">Continue reading </b>
+        </a>
+      </div>
+    )
+  }
+</div>
